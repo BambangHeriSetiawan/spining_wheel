@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mainVm" type="com.simxid.spin_wheel.ui.MainVM"/>
+        <import type="android.view.View"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+        <TextView
+            android:id="@+id/tv_speed"
+            android:text="0"
+            android:layout_above="@id/img_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:text="10" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_wheel"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_wheel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update_speed"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_wheel"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="Update Speed" />
+        <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_update_speed"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </RelativeLayout>
+</layout>
+
